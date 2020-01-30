@@ -1,11 +1,20 @@
 <template>
   <v-app id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/curriculum/upsert">Create</router-link>
+      <TopNav />
     </div>
       <v-content>
-      <router-view></router-view>
+        <v-container>
+          <router-view/>
+        </v-container>
     </v-content>
   </v-app>
 </template>
+<script>
+import TopNav from './components/TopNav.vue'
+export default {
+  components: {
+    TopNav
+  }
+}
+</script>
